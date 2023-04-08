@@ -1,0 +1,1269 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head></head><body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    
+    
+    
+    
+
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[1]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#importing pandas as pd</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#loading csv file to the dataframe</span>
+<span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\aboom\Downloads\youtube_dataset.csv&quot;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;ANSI&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[33]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#To get an idea about the dataframe</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult">
+<div>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>web-scraper-order</th>
+      <th>web-scraper-start-url</th>
+      <th>userID</th>
+      <th>userID-href</th>
+      <th>name</th>
+      <th>uploads</th>
+      <th>subscribers</th>
+      <th>videoviews</th>
+      <th>country</th>
+      <th>channeltype</th>
+      <th>usercreated</th>
+      <th>grade</th>
+      <th>YouTube_Link</th>
+      <th>YouTube_Link-href</th>
+      <th>TwitterHandle</th>
+      <th>TwitterHandle-href</th>
+      <th>InstagramHandle</th>
+      <th>InstagramHandle-href</th>
+      <th>MonthlyEarnings</th>
+      <th>YearlyEarnings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1553043067-5148</td>
+      <td>https://socialblade.com/youtube/top/5000/mosts...</td>
+      <td>PewDiePie</td>
+      <td>https://socialblade.com/youtube/c/pewdiepie</td>
+      <td>PewDiePie</td>
+      <td>3779</td>
+      <td>90210848</td>
+      <td>20772365682</td>
+      <td>US</td>
+      <td>Entertainment</td>
+      <td>Apr 29th, 2010</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>https://youtube.com/channel/UC-lHJZR3Gqxm24_Vd...</td>
+      <td>NaN</td>
+      <td>https://twitter.com/pewdiepie</td>
+      <td>NaN</td>
+      <td>https://instagram.com/pewdiepie</td>
+      <td>€66.9K - €1.1M</td>
+      <td>€802.3K - €12.8M</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1553043063-5147</td>
+      <td>https://socialblade.com/youtube/top/5000/mosts...</td>
+      <td>T-Series</td>
+      <td>https://socialblade.com/youtube/c/tseriesmusic</td>
+      <td>T-Series</td>
+      <td>13218</td>
+      <td>90194329</td>
+      <td>65092058996</td>
+      <td>IN</td>
+      <td>Music</td>
+      <td>Mar 13th, 2006</td>
+      <td>A++</td>
+      <td>NaN</td>
+      <td>https://youtube.com/channel/UCq-Fj5jknLsUf-MWS...</td>
+      <td>NaN</td>
+      <td>https://instagram.com/tseries.official</td>
+      <td>NaN</td>
+      <td>https://plus.google.com/115156822320080163368</td>
+      <td>€635.6K - €10.2M</td>
+      <td>€7.6M - €122M</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1553043059-5146</td>
+      <td>https://socialblade.com/youtube/top/5000/mosts...</td>
+      <td>Gaming</td>
+      <td>https://socialblade.com/youtube/channel/UCOpNc...</td>
+      <td>Gaming</td>
+      <td>0</td>
+      <td>81888222</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>Games</td>
+      <td>Dec 15th, 2013</td>
+      <td>D-</td>
+      <td>NaN</td>
+      <td>https://youtube.com/channel/UCOpNcN46UbXVtpKMr...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>https://youtube.com/channel/UCOpNcN46UbXVtpKMr...</td>
+      <td>€0 - €0</td>
+      <td>€0 - €0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1553043055-5145</td>
+      <td>https://socialblade.com/youtube/top/5000/mosts...</td>
+      <td>YouTube Movies</td>
+      <td>https://socialblade.com/youtube/channel/UClgRk...</td>
+      <td>YouTube Movies</td>
+      <td>0</td>
+      <td>77413743</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>Film</td>
+      <td>Jun 10th, 2015</td>
+      <td>D-</td>
+      <td>NaN</td>
+      <td>https://youtube.com/channel/UClgRkhTL3_hImCAmd...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>https://youtube.com/channel/UClgRkhTL3_hImCAmd...</td>
+      <td>€0 - €0</td>
+      <td>€0 - €0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1553043051-5144</td>
+      <td>https://socialblade.com/youtube/top/5000/mosts...</td>
+      <td>Sports</td>
+      <td>https://socialblade.com/youtube/channel/UCEgdi...</td>
+      <td>Sports</td>
+      <td>0</td>
+      <td>75622870</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>Sports</td>
+      <td>Dec 15th, 2013</td>
+      <td>D-</td>
+      <td>NaN</td>
+      <td>https://youtube.com/channel/UCEgdi0XIXXZ-qJOFP...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>https://youtube.com/channel/UCEgdi0XIXXZ-qJOFP...</td>
+      <td>€0 - €0</td>
+      <td>€0 - €0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#to get the name of the column names</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult">
+<pre>Index([&#39;web-scraper-order&#39;, &#39;web-scraper-start-url&#39;, &#39;userID&#39;, &#39;userID-href&#39;,
+       &#39;name&#39;, &#39;uploads&#39;, &#39;subscribers&#39;, &#39;videoviews&#39;, &#39;country&#39;,
+       &#39;channeltype&#39;, &#39;usercreated&#39;, &#39;grade&#39;, &#39;YouTube_Link&#39;,
+       &#39;YouTube_Link-href&#39;, &#39;TwitterHandle&#39;, &#39;TwitterHandle-href&#39;,
+       &#39;InstagramHandle&#39;, &#39;InstagramHandle-href&#39;, &#39;MonthlyEarnings&#39;,
+       &#39;YearlyEarnings&#39;],
+      dtype=&#39;object&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#To check the size of the datdframe</span>
+<span class="n">df</span><span class="o">.</span><span class="n">size</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult">
+<pre>78880</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#to check the shape of the dataframe</span>
+<span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult">
+<pre>(3944, 20)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># to check the datatype of columns</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult">
+<pre>web-scraper-order        object
+web-scraper-start-url    object
+userID                   object
+userID-href              object
+name                     object
+uploads                   int64
+subscribers               int64
+videoviews                int64
+country                  object
+channeltype              object
+usercreated              object
+grade                    object
+YouTube_Link             object
+YouTube_Link-href        object
+TwitterHandle            object
+TwitterHandle-href       object
+InstagramHandle          object
+InstagramHandle-href     object
+MonthlyEarnings          object
+YearlyEarnings           object
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[26]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#to verify that dataframe is in the order of top 4000 subscribers</span>
+<span class="n">df</span><span class="o">.</span><span class="n">subscribers</span><span class="o">.</span><span class="n">is_monotonic_decreasing</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[70]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Creating function to make code modular</span>
+<span class="k">def</span> <span class="nf">answer1</span><span class="p">():</span>
+    <span class="n">df_first1000</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+    <span class="n">ans1</span> <span class="o">=</span> <span class="n">df_first1000</span><span class="p">[</span><span class="s1">&#39;channeltype&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s1">&#39;Channel Type&#39;</span><span class="p">:</span> <span class="n">ans1</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+        <span class="s1">&#39;Count&#39;</span><span class="p">:</span> <span class="n">ans1</span><span class="o">.</span><span class="n">values</span>
+    <span class="p">})</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[73]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># calling function</span>
+<span class="n">df_answer_one</span><span class="o">=</span><span class="n">answer1</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_answer_one</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>     Channel Type  Count
+0   Entertainment    284
+1           Music    240
+2           Games    115
+3          Comedy     76
+4          People     72
+5           Howto     49
+6            Film     36
+7       Education     30
+8            Tech     19
+9          Sports     17
+10           News     17
+11          Autos      3
+12        Animals      2
+13      Nonprofit      1
+14         Travel      1
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[98]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># to find the total number of types in channeltype column</span>
+<span class="n">df_answer_one</span><span class="o">.</span><span class="n">Count</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[98]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult">
+<pre>962</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[97]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#to verify total number of null fields in the channeltype column</span>
+<span class="n">df3</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">df3</span><span class="p">[</span><span class="s1">&#39;channeltype&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[97]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult">
+<pre>38</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[88]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#since the total count of distinct values is less than 1000, checking for null values</span>
+<span class="n">df_answer_one</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[88]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult">
+<pre>Channel Type    0
+Count           0
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[83]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#loading to csv file in desktop</span>
+<span class="n">First1000</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">First1000</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\aboom\OneDrive\Desktop\FIRST1000.CSV&quot;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[84]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#to know the shape </span>
+<span class="n">First1000</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[84]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult">
+<div>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>web-scraper-order</th>
+      <th>web-scraper-start-url</th>
+      <th>userID</th>
+      <th>userID-href</th>
+      <th>name</th>
+      <th>uploads</th>
+      <th>subscribers</th>
+      <th>videoviews</th>
+      <th>country</th>
+      <th>channeltype</th>
+      <th>usercreated</th>
+      <th>grade</th>
+      <th>YouTube_Link</th>
+      <th>YouTube_Link-href</th>
+      <th>TwitterHandle</th>
+      <th>TwitterHandle-href</th>
+      <th>InstagramHandle</th>
+      <th>InstagramHandle-href</th>
+      <th>MonthlyEarnings</th>
+      <th>YearlyEarnings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1553043067-5148</td>
+      <td>https://socialblade.com/youtube/top/5000/mosts...</td>
+      <td>PewDiePie</td>
+      <td>https://socialblade.com/youtube/c/pewdiepie</td>
+      <td>PewDiePie</td>
+      <td>3779</td>
+      <td>90210848</td>
+      <td>20772365682</td>
+      <td>US</td>
+      <td>Entertainment</td>
+      <td>Apr 29th, 2010</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>https://youtube.com/channel/UC-lHJZR3Gqxm24_Vd...</td>
+      <td>NaN</td>
+      <td>https://twitter.com/pewdiepie</td>
+      <td>NaN</td>
+      <td>https://instagram.com/pewdiepie</td>
+      <td>€66.9K - €1.1M</td>
+      <td>€802.3K - €12.8M</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1553043063-5147</td>
+      <td>https://socialblade.com/youtube/top/5000/mosts...</td>
+      <td>T-Series</td>
+      <td>https://socialblade.com/youtube/c/tseriesmusic</td>
+      <td>T-Series</td>
+      <td>13218</td>
+      <td>90194329</td>
+      <td>65092058996</td>
+      <td>IN</td>
+      <td>Music</td>
+      <td>Mar 13th, 2006</td>
+      <td>A++</td>
+      <td>NaN</td>
+      <td>https://youtube.com/channel/UCq-Fj5jknLsUf-MWS...</td>
+      <td>NaN</td>
+      <td>https://instagram.com/tseries.official</td>
+      <td>NaN</td>
+      <td>https://plus.google.com/115156822320080163368</td>
+      <td>€635.6K - €10.2M</td>
+      <td>€7.6M - €122M</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1553043059-5146</td>
+      <td>https://socialblade.com/youtube/top/5000/mosts...</td>
+      <td>Gaming</td>
+      <td>https://socialblade.com/youtube/channel/UCOpNc...</td>
+      <td>Gaming</td>
+      <td>0</td>
+      <td>81888222</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>Games</td>
+      <td>Dec 15th, 2013</td>
+      <td>D-</td>
+      <td>NaN</td>
+      <td>https://youtube.com/channel/UCOpNcN46UbXVtpKMr...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>https://youtube.com/channel/UCOpNcN46UbXVtpKMr...</td>
+      <td>€0 - €0</td>
+      <td>€0 - €0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1553043055-5145</td>
+      <td>https://socialblade.com/youtube/top/5000/mosts...</td>
+      <td>YouTube Movies</td>
+      <td>https://socialblade.com/youtube/channel/UClgRk...</td>
+      <td>YouTube Movies</td>
+      <td>0</td>
+      <td>77413743</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>Film</td>
+      <td>Jun 10th, 2015</td>
+      <td>D-</td>
+      <td>NaN</td>
+      <td>https://youtube.com/channel/UClgRkhTL3_hImCAmd...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>https://youtube.com/channel/UClgRkhTL3_hImCAmd...</td>
+      <td>€0 - €0</td>
+      <td>€0 - €0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1553043051-5144</td>
+      <td>https://socialblade.com/youtube/top/5000/mosts...</td>
+      <td>Sports</td>
+      <td>https://socialblade.com/youtube/channel/UCEgdi...</td>
+      <td>Sports</td>
+      <td>0</td>
+      <td>75622870</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>Sports</td>
+      <td>Dec 15th, 2013</td>
+      <td>D-</td>
+      <td>NaN</td>
+      <td>https://youtube.com/channel/UCEgdi0XIXXZ-qJOFP...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>https://youtube.com/channel/UCEgdi0XIXXZ-qJOFP...</td>
+      <td>€0 - €0</td>
+      <td>€0 - €0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[87]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Importing engine</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[99]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#importing pymysql</span>
+<span class="kn">import</span> <span class="nn">pymysql</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[106]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#connecting to sql</span>
+<span class="n">engine</span><span class="o">=</span><span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;mysql+pymysql://root:1011@127.0.0.1/abudatabase&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[107]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#loading the top thousand channel database to sql</span>
+<span class="n">First1000</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;top_thousand_channels&#39;</span><span class="p">,</span><span class="n">engine</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[107]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult">
+<pre>1000</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[108]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#connection argument</span>
+<span class="n">conn</span><span class="o">=</span><span class="n">engine</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[109]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># to display the contents of the loaded csv</span>
+<span class="n">df_from_sql</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s2">&quot;SELECT* FROM abudatabase.top_thousand_channels&quot;</span><span class="p">,</span><span class="n">conn</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[110]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># to know the shape of the loaded csv in sql</span>
+<span class="n">df_from_sql</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[110]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult">
+<div>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>web-scraper-order</th>
+      <th>web-scraper-start-url</th>
+      <th>userID</th>
+      <th>userID-href</th>
+      <th>name</th>
+      <th>uploads</th>
+      <th>subscribers</th>
+      <th>videoviews</th>
+      <th>country</th>
+      <th>channeltype</th>
+      <th>usercreated</th>
+      <th>grade</th>
+      <th>YouTube_Link</th>
+      <th>YouTube_Link-href</th>
+      <th>TwitterHandle</th>
+      <th>TwitterHandle-href</th>
+      <th>InstagramHandle</th>
+      <th>InstagramHandle-href</th>
+      <th>MonthlyEarnings</th>
+      <th>YearlyEarnings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1553043067-5148</td>
+      <td>https://socialblade.com/youtube/top/5000/mosts...</td>
+      <td>PewDiePie</td>
+      <td>https://socialblade.com/youtube/c/pewdiepie</td>
+      <td>PewDiePie</td>
+      <td>3779</td>
+      <td>90210848</td>
+      <td>20772365682</td>
+      <td>US</td>
+      <td>Entertainment</td>
+      <td>Apr 29th, 2010</td>
+      <td>A</td>
+      <td>None</td>
+      <td>https://youtube.com/channel/UC-lHJZR3Gqxm24_Vd...</td>
+      <td>None</td>
+      <td>https://twitter.com/pewdiepie</td>
+      <td>None</td>
+      <td>https://instagram.com/pewdiepie</td>
+      <td>€66.9K - €1.1M</td>
+      <td>€802.3K - €12.8M</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1553043063-5147</td>
+      <td>https://socialblade.com/youtube/top/5000/mosts...</td>
+      <td>T-Series</td>
+      <td>https://socialblade.com/youtube/c/tseriesmusic</td>
+      <td>T-Series</td>
+      <td>13218</td>
+      <td>90194329</td>
+      <td>65092058996</td>
+      <td>IN</td>
+      <td>Music</td>
+      <td>Mar 13th, 2006</td>
+      <td>A++</td>
+      <td>None</td>
+      <td>https://youtube.com/channel/UCq-Fj5jknLsUf-MWS...</td>
+      <td>None</td>
+      <td>https://instagram.com/tseries.official</td>
+      <td>None</td>
+      <td>https://plus.google.com/115156822320080163368</td>
+      <td>€635.6K - €10.2M</td>
+      <td>€7.6M - €122M</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1553043059-5146</td>
+      <td>https://socialblade.com/youtube/top/5000/mosts...</td>
+      <td>Gaming</td>
+      <td>https://socialblade.com/youtube/channel/UCOpNc...</td>
+      <td>Gaming</td>
+      <td>0</td>
+      <td>81888222</td>
+      <td>0</td>
+      <td>None</td>
+      <td>Games</td>
+      <td>Dec 15th, 2013</td>
+      <td>D-</td>
+      <td>None</td>
+      <td>https://youtube.com/channel/UCOpNcN46UbXVtpKMr...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>https://youtube.com/channel/UCOpNcN46UbXVtpKMr...</td>
+      <td>€0 - €0</td>
+      <td>€0 - €0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1553043055-5145</td>
+      <td>https://socialblade.com/youtube/top/5000/mosts...</td>
+      <td>YouTube Movies</td>
+      <td>https://socialblade.com/youtube/channel/UClgRk...</td>
+      <td>YouTube Movies</td>
+      <td>0</td>
+      <td>77413743</td>
+      <td>0</td>
+      <td>None</td>
+      <td>Film</td>
+      <td>Jun 10th, 2015</td>
+      <td>D-</td>
+      <td>None</td>
+      <td>https://youtube.com/channel/UClgRkhTL3_hImCAmd...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>https://youtube.com/channel/UClgRkhTL3_hImCAmd...</td>
+      <td>€0 - €0</td>
+      <td>€0 - €0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1553043051-5144</td>
+      <td>https://socialblade.com/youtube/top/5000/mosts...</td>
+      <td>Sports</td>
+      <td>https://socialblade.com/youtube/channel/UCEgdi...</td>
+      <td>Sports</td>
+      <td>0</td>
+      <td>75622870</td>
+      <td>0</td>
+      <td>None</td>
+      <td>Sports</td>
+      <td>Dec 15th, 2013</td>
+      <td>D-</td>
+      <td>None</td>
+      <td>https://youtube.com/channel/UCEgdi0XIXXZ-qJOFP...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>https://youtube.com/channel/UCEgdi0XIXXZ-qJOFP...</td>
+      <td>€0 - €0</td>
+      <td>€0 - €0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<script type="module" src="https://s.brightspace.com/lib/bsi/20.23.3-209/unbundled/mathjax.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					if (document.querySelector('math') || /\$\$|\\\(|\\\[|\\begin{|\\ref{|\\eqref{/.test(document.body.innerHTML)) {
+						document.querySelectorAll('mspace[linebreak="newline"]').forEach(elm => {
+							elm.setAttribute('style', 'display: block; height: 0.5rem;');
+						});
+
+						window.D2L.MathJax.loadMathJax({
+							'outputScale': 1.3,
+							'renderLatex': false
+						});
+					}
+				});</script><script type="module" src="https://s.brightspace.com/lib/bsi/20.23.3-209/unbundled/prism.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					document.querySelectorAll('.d2l-code').forEach(code => {
+						window.D2L.Prism.formatCodeElement(code);
+					});
+				});</script></body></html>
